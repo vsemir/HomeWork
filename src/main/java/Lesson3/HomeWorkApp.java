@@ -109,11 +109,10 @@ public class HomeWorkApp {
         System.out.println("Минимальное число в массиве: " + min);
     }
 
-    public static void sumArray() {
+    public static boolean sumArray() {
         int[] arr = {1, 2, 3, 3, 2, 1};
         int sum1 = 0;
         int sum2 = 0;
-        boolean sum = true;
         for (int i=0; i < arr.length; i++){
             if (i < arr.length/2){
                 sum1 += arr[i];
@@ -121,9 +120,9 @@ public class HomeWorkApp {
             else {
                 sum2 += arr[i];
             }
-            sum = sum1 == sum2;
         }
-        System.out.println(sum1 + " " + sum2 + " " + sum);
+        System.out.println(sum1 + " " + sum2 + " " );
+        return sum1 == sum2;
     }
 
     public static void shiftArray(int[] arr, int p) {
